@@ -8,7 +8,7 @@ var version = '1.0.0';
 
 bot.on('ready', () => {
     console.log('This bot is online!')
-    bot.user.setActivity('NoobBeast')
+    bot.user.setActivity(`Watching Noobbeasties.`, {type: 4})
 })
 
 bot.on('guildMemberAdd', member => {
@@ -52,7 +52,7 @@ bot.on('message', message => {
                 const member = message.guild.member(user);
 
                 if (member) {
-                    member.kick('You were kicked for trolling!').then(() => {
+                    member.kick('You have been kicked').then(() => {
                         message.reply(`${user.tag} has been kicked`);
                     }).catch(err => {
                         message.reply('i was unable to kick the member');
@@ -148,6 +148,9 @@ bot.on('message', message => {
             message.channel.send(embed);
 
                 break;
+
+                case 'SKJ':
+            message.channel.send('Sad Korean Jesus')
     
 
     }
